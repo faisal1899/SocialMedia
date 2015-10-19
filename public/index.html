@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/angular-material.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title></title>
+</head>
+<body ng-app="socialMedia" ng-controller="LoginCtrl">
+    <md-toolbar class="md-warn sc-title-toolbar">
+        <div class="md-toolbar-tools">
+        <h2 class="md-flex">Social Media OAuth</h2>
+        </div>
+    </md-toolbar>
+    <center>
+        <md-button class="md-raised md-primary" ng-click="facebookLogin()">Facebook</md-button>
+        <md-button class="md-raised md-warn" ng-click="googlePluseLogin()">Google Plus</md-button>
+        <md-button class="md-raised md-primary" ng-click="twitterLogin()">Twitter</md-button>    
+    </center>
+    <md-card class="sc-profile-card">
+        <h2 class="md-title sc-card-title">User Profile</h2>
+        <md-card-content>
+            <div class="sc-profile-conrainer">
+                <table>
+                    <tr>
+                        <td>Username</td>
+                        <td>:</td>
+                        <td>{{ profileData.username }}</td>
+                    </tr>
+                    <tr>
+                        <td>Gender:</td>
+                        <td>:</td>
+                        <td>{{ profileData.gender }}</td>
+                    </tr>
+                    <tr>
+                        <td>Date of birth:</td>
+                        <td>:</td>
+                        <td>{{ profileData.dob }}</td>
+                    </tr>
+                    <tr>
+                        <td>Email ID:</td>
+                        <td>:</td>
+                        <td>{{ profileData.email }}</td>
+                    </tr>
+                </table>
+            </div>
+        </md-card-content>
+    </md-card>
+     <!-- Angular Material Dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.4/angular-material.min.js"></script>
+    <script type="application/javascript" src="js/services.js"></script>
+    <script type="application/javascript" src="js/app.js"></script>
+</body>
+</html>

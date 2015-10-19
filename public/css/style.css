@@ -1,0 +1,13 @@
+.sc-title-toolbar h2{
+    margin: 0 auto;
+}
+
+.sc-profile-card {
+    width:50%;
+    margin: 10px auto;
+    background-color: #f9fbe7 !important;
+}
+
+.sc-card-title {
+    text-align: center;
+}
