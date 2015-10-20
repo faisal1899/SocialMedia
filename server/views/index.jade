@@ -1,15 +1,10 @@
-doctype html
-html
-	head
-		title Social Meadia
-		link(rel="stylesheet", href="vendor/bootstrap/dist/css/bootstrap.min.css")
-	body
-		.container
-			h1.text-center Social Media
-			.row
-				.col-sm-4.text-center
-					a.btn.btn-primary(hre="") Facebook
-				.col-sm-4.text-center
-					a.btn.btn-primary(hre="") Twitter
-				.col-sm-4.text-center
-					a.btn.btn-primary(hre="") Google Plus
+extends ./includes/layout.jade
+
+block content
+	.row
+		.col-sm-4.text-center
+			a.btn.btn-primary(href="/facebook") Facebook
+		.col-sm-4.text-center
+			a.btn.btn-primary(href="") Twitter
+		.col-sm-4.text-center
+			a.btn.btn-primary(href="") Google Plus

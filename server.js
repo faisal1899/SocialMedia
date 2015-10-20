@@ -1,17 +1,18 @@
+'use strict';
+
 var express = require('express'),
 	app = express();
 
 
-app.set('views', __dirname + '/server/views');
-app.set('view engine', 'jade');
-app.use(express.static(__dirname + '/public'));
+var config = require('./server/config/config');
+
+require('./server/config/express')(app, express, config);
+
+require('./server/config/mongoose')(config);
+
+require('./server/config/routes')(app);
 
 
-app.get('/', function(req, res) {
-	res.render('index');
-});
-
-
-app.listen(3030, function() {
-	console.log('Listening on port ' + 3030);
+app.listen(config.port, function() {
+	console.log('Listening on port ' + config.port);
 });

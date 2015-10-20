@@ -1,0 +1,42 @@
+extends ./includes/layout.jade
+
+block content
+	form.form-horizontal(action="/logout", method="post")
+		.row
+			legend #{user.accountType} Profile Details
+		.form-group
+			.row
+				fieldset
+					.col-sm-2
+						label.pull-right First Name
+					.col-sm-10
+						.field
+							| #{user.firstName}
+		.form-group
+			.row
+				fieldset
+					.col-sm-2
+						label.pull-right Last Name
+					.col-sm-10
+						.field
+							| #{user.lastName}
+		.form-group
+			.row
+				fieldset
+					.col-sm-2
+						label.pull-right Gener
+					.col-sm-10
+						.field
+							| #{user.gender}
+		.form-group
+			.row
+				fieldset
+					.col-sm-2
+						label.pull-right Email
+					.col-sm-10
+						.field
+							| #{user.email}
+		.form-group
+			.row
+				.col-sm-offset-2.col-sm-10
+					button.btn.btn-primary(type="submit") Logout
