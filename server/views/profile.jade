@@ -20,22 +20,51 @@ block content
 					.col-sm-10
 						.field
 							| #{user.lastName}
-		.form-group
-			.row
-				fieldset
-					.col-sm-2
-						label.pull-right Gener
-					.col-sm-10
-						.field
-							| #{user.gender}
-		.form-group
-			.row
-				fieldset
-					.col-sm-2
-						label.pull-right Email
-					.col-sm-10
-						.field
-							| #{user.email}
+		if user.gender
+			.form-group
+				.row
+					fieldset
+						.col-sm-2
+							label.pull-right Gener
+						.col-sm-10
+							.field
+								| #{user.gender}
+		if user.email
+			.form-group
+				.row
+					fieldset
+						.col-sm-2
+							label.pull-right Email
+						.col-sm-10
+							.field
+								| #{user.email}
+		if user.followersCount
+			.form-group
+				.row
+					fieldset
+						.col-sm-2
+							label.pull-right Followers Count
+						.col-sm-10
+							.field
+								| #{user.followersCount}
+		if user.friendsCount
+			.form-group
+				.row
+					fieldset
+						.col-sm-2
+							label.pull-right Friends Count
+						.col-sm-10
+							.field
+								| #{user.friendsCount}
+		if user.screenName
+			.form-group
+				.row
+					fieldset
+						.col-sm-2
+							label.pull-right Screen Name
+						.col-sm-10
+							.field
+								| #{user.screenName}
 		.form-group
 			.row
 				.col-sm-offset-2.col-sm-10

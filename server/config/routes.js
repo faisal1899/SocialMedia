@@ -1,5 +1,6 @@
-var facebook = require('./passport-facebook.js'),
-	twitter = require('./passport-twitter.js');
+var facebook = require('./passport-facebook'),
+	twitter = require('./passport-twitter')/*,
+	google = require('./passport-google')*/;
 
 module.exports = function(app) {
 
@@ -31,6 +32,9 @@ module.exports = function(app) {
 
 	app.get('/twitter', twitter.twitterLogin);
 	app.get('/twitter/callback', twitter.twitterCallback);
+
+/*	app.get('/auth/google', google.googleLogin);
+	app.get('/auth/google/return', google.googleCallback);*/
 
 	app.post('/logout', function(req, res) {
 		req.logout();

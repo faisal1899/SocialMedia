@@ -5,7 +5,8 @@ var passport = require('passport');
 var facebookConfig = {
 	clientID: '1080094295374464',
 	clientSecret: '7ed1844b4fb303915f28154db6f6d2cb',
-	callbackURL: 'http://localhost:3030/facebook/callback',
+//	callbackURL: 'http://localhost:3030/facebook/callback',
+	callbackURL: 'http://192.168.15.78:3030/facebook/callback',
     profileFields: ['id', 'email', 'gender', 'name']
 //    profileFields: ['id', 'email', 'gender', 'name', 'birthday']
 }

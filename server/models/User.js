@@ -6,7 +6,11 @@ var userSchema = mongoose.Schema({
 	firstName: String,
 	lastName: String,
 	email: String,
-	gender: String
+	gender: String,
+	lastName: String,
+	followersCount: String,
+	friendsCount: String,
+	screenName: String
 }, {_id: false})
 
 mongoose.model('User', userSchema);
